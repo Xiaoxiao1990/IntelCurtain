@@ -105,15 +105,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
 
-            case R.id.txt_setting:
-                if (layout_setting.getVisibility() == View.VISIBLE) {
-                    layout_setting.setVisibility(View.GONE);
-                    txt_setting.setText(getString(R.string.expand_search_settings));
-                } else {
-                    layout_setting.setVisibility(View.VISIBLE);
-                    txt_setting.setText(getString(R.string.retrieve_search_settings));
-                }
-                break;
+//            case R.id.txt_setting:
+//                if (layout_setting.getVisibility() == View.VISIBLE) {
+//                    layout_setting.setVisibility(View.GONE);
+//                    txt_setting.setText(getString(R.string.expand_search_settings));
+//                } else {
+//                    layout_setting.setVisibility(View.VISIBLE);
+//                    txt_setting.setText(getString(R.string.retrieve_search_settings));
+//                }
+//                break;
         }
     }
 
@@ -135,6 +135,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         txt_setting.setOnClickListener(this);
         layout_setting.setVisibility(View.GONE);
         txt_setting.setText(getString(R.string.expand_search_settings));
+        txt_setting.setVisibility(View.GONE);
 
         img_loading = (ImageView) findViewById(R.id.img_loading);
         operatingAnim = AnimationUtils.loadAnimation(this, R.anim.rotate);
